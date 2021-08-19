@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="mk">
+    <head>
+        <title>My web</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+      <div class="header">
+        <div class="divce1" >
+           <img class="logo" src="./img/Tasty1.gif" alt="my logo"/>
+        </div>
+        <div class="divce2">
+           <nav id="main-menu"> 
+             <a  href="index.html">HOME</a>
+             <a  href="offer.html">OFFER'S</a>
+             <a  href="menu.html" >MENU</a> 
+             <a  href="#contact" class="active">CONTACT</a>
+           </nav>
+        </div>
+      </div><!--Kraj na Header-->
+      <div class="disviv">
+        <div class="divce4">
+          <form action="/contact.php" method="_POST">
+            <fieldset>
+              <legend>Person:</legend>
+            <label class="fontwth" for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..">
+            <br>
+            <label class="fontwth" for="mob">Mobile</label>
+            <input type="number" id="mob" name="mob" placeholder="Your mobile number..">
+            <br>
+            </fieldset>
+            <fieldset >
+              <legend>Make Selection:</legend>
+            <label class="fontwth">Select Menu:</label>
+            <select id="selectBox">
+              <optgroup label="Offers"></optgroup>
+              <option>Double Cheeseburger ,fries and drink</option>
+              <option>Burger and drink.</option>
+              <option>Sausages,fries and drink.</option>
+              <option>Double Burger and drink.</option>
+              <option>Bacon Burger, fries and drink.</option>
+              <optgroup label="Other Menu"></optgroup>
+              <option>Tasty Burger </option>
+              <option>Tasty Cheeseburger</option>
+              <option>Bacon Burger</option>
+              <option>Double Salat Burge</option>
+              <option>Double Cheese Burger</option>
+          </select><br/>
+          <input type="checkbox" id="check_id1" value="Salt">
+          <label for="vehicle1">Salty</label>
+          <input type="checkbox" id="check_id2" value="Pepper">
+          <label for="vehicle1">Pepper</label>          
+          <input type="checkbox" id="check_id3" value="Mustard">
+          <label for="vehicle1">Mustard</label>
+          <input type="checkbox" id="check_id4" value="Mayonnase">
+          <label for="vehicle1">Mayonnase</label><br/>
+
+
+          <input id="copyBtn" type="button" value="Add to Order" />
+          
+          <textarea name="txtarea" id="output" style="width:80%;height: 100px;font-weight: bold;font-family: Georgia, 'Times New Roman', Times, serif;">
+             Your Order:
+          </textarea>
+          <script>
+              $("#copyBtn").click(function() {
+        var selected = $("#selectBox").val();
+        var checkbox1 = $('#check_id1:checked').val(); 
+        var checkbox2 = $('#check_id2:checked').val(); 
+        var checkbox3 = $('#check_id3:checked').val();  
+        var checkbox4 = $('#check_id4:checked').val();  
+        $("#output").append("\n * " + selected +"," + checkbox1+"," + checkbox2+"," + checkbox3 +"," + checkbox4 );
+      });
+      
+          </script>
+            <input style="margin-bottom: 5px; " type="submit" value="Send Order">
+          </fieldset>
+          </form>
+        </div>
+        <div class="razmah">
+        <iframe  style="width: 60%; margin: 110px 0 0 80px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.133295547107!2d21.31046171491481!3d41.02233962650924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13572515be1af01d%3A0x85ed0578a5ba907b!2sAnesti%20Panovski%2C%20Bitola!5e0!3m2!1sen!2smk!4v1583282800062!5m2!1sen!2smk"  height="400" width="500"></iframe>
+        </div>
+      </div>
+          </body>
+</html>
