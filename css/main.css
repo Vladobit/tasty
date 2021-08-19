@@ -1,0 +1,205 @@
+body{
+    background-image: url("../img/sendwich.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.header{
+    border-bottom: 3px solid #fff;
+    display: flex;
+    position: sticky;
+}
+.logo{
+    
+    margin-top: 5px;
+    width: 120;
+    height: 40px;
+}
+.divce1{
+    width: 20%;
+    float: left;
+}
+.divce2{
+    width: 80%;
+    float: right;
+}
+#main-menu{
+    display: flex;
+    text-align: center;
+    font-size: xx-large;
+}
+#main-menu a{
+    flex-grow: 1;
+    display: block;
+    padding: 10px 0px;
+    text-decoration: none;
+    color :white;
+    transition: 400ms;
+}
+#main-menu a:hover,
+#main-menu a.active{
+    color: white;
+    background-color:rgba(136, 101, 37, 0.541);
+}
+.disviv{
+    display: flex;
+}
+.divce3{
+    width: 50%;
+    text-align: center;
+    margin-top: 0px;
+    color: #fff;
+    font-size: x-large;
+}
+.divce4{
+    width: 50%;
+    text-align: center;
+    color: aliceblue;
+    font-size: x-large;
+    margin-top: 100px;
+}
+.img{
+    position: relative;
+    width: 350px;
+    height: 300px;
+}
+.fontwth{
+    color: #fff;
+}
+.razmah{
+    width: 80%;
+}
+.news{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+.table{
+    width: 100%;
+    border: 1px solid whitesmoke;
+    text-align: center;
+    color: white;
+    display: block;
+    }
+.cell{
+    border: 1px solid white;
+    width: 150px;
+  flex: auto;
+}
+.icon{
+    width: 60px;
+    height: 60px;
+    background-color:wheat;
+}
+.cell2{
+    width: 300px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 12px;
+    color: white;
+    justify-content: space-around;
+}
+/* Button del */
+.btn{ 
+    margin-left: 100px;
+    margin-top: 30px;
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(90deg,#c78343,#ec3304,#ffeb3b,#c78343);
+    background-size: 400%;
+    border-radius: 40px;
+    z-index: 1;
+}
+.ml180px{
+    margin-left: 180px;
+    text-decoration: none;
+    color: orange;
+}
+.btn:hover
+{
+    animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+    0%{
+        background-position:  0%;
+    }
+    100%{
+        background-size: 400%;
+    }
+}
+.btn:before
+{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#ffeb3b,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+.btn:hover:before
+{
+    filter: blur(10px);
+    opacity: 1; 
+    animation: animate 8s linear infinite; 
+}
+@media only screen and (max-width:400px){
+    body{
+        background-color:black;
+        background-image: url("../img/backs.jpg");
+        /* background-size:cover ; */
+        background-repeat:none ;
+    }
+    #main-menu{
+        display: block;
+        text-align: center;
+        font-size: small;
+       
+    }
+    #main-menu a{
+        padding: 10px 0px;
+        text-decoration: none;
+        color :white;
+        transition: 400ms;
+    }
+    #main-menu a:hover,
+    #main-menu a.active{
+        color: white;
+        background-color:rgba(136, 101, 37, 0.541);
+    }
+    .disviv{
+        display: block;
+        text-align: center;
+    }
+    .btn{
+        width: 100px;
+        height: 50px;
+        margin: none;
+     }
+     .content .a{
+         margin: auto;
+     }
+
+    
+}
